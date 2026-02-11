@@ -24,7 +24,7 @@ import {
 } from 'recharts';
 
 // API Base URL
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 // Configure axios interceptor to always include token
 axios.interceptors.request.use(
